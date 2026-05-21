@@ -1,0 +1,64 @@
+﻿file_scope,column_name,description_cn,description_en,unit,type,role,notes
+summary_results_all.csv / summary_results_ei.csv / summary_results_northridge.csv,case_id,工况编号,Case identifier,-,string,identifier,如果原始文件中使用 CaseID，可与 case_id 等价。
+summary_results_all.csv / summary_results_ei.csv / summary_results_northridge.csv,CaseID,工况编号,Case identifier,-,string,identifier,保留 OpenSeesPy 输出中的原始字段名；若已统一为 case_id，可忽略本行。
+summary_results_all.csv / summary_results_ei.csv / summary_results_northridge.csv,gm_name,地震动名称,Ground motion name,-,string,input,建议取值：ei 或 northridge。
+summary_results_all.csv / summary_results_ei.csv / summary_results_northridge.csv,gm_file,地震动文件相对路径,Relative path of the ground motion file,-,string,metadata,建议使用相对路径，例如 ground_motion/ei3.txt，不保留本地绝对路径。
+summary_results_all.csv / summary_results_ei.csv / summary_results_northridge.csv,success,分析是否成功,Whether the nonlinear time-history analysis was completed successfully,-,bool,metadata,
+summary_results_all.csv / summary_results_ei.csv / summary_results_northridge.csv,message,分析状态信息,Analysis status or error message,-,string,metadata,
+summary_results_all.csv / summary_results_ei.csv / summary_results_northridge.csv,analysis_time_sec,单个工况分析耗时,Analysis time for a single case,s,float,metadata,
+summary_results_all.csv / summary_results_ei.csv / summary_results_northridge.csv,n_story,结构层数,Number of stories,-,int,input,本数据集中为 5。
+summary_results_all.csv / summary_results_ei.csv / summary_results_northridge.csv,story_height_m,层高,Story height,m,float,input,
+summary_results_all.csv / summary_results_ei.csv / summary_results_northridge.csv,floor_mass_kg,楼层集中质量,Lumped floor mass,kg,float,input,
+summary_results_all.csv / summary_results_ei.csv / summary_results_northridge.csv,damping_ratio,目标阻尼比,Target damping ratio used for Rayleigh damping,-,float,input,
+summary_results_all.csv / summary_results_ei.csv / summary_results_northridge.csv,alpha_post,屈后刚度比,Post-yield stiffness ratio,-,float,input,
+summary_results_all.csv / summary_results_ei.csv / summary_results_northridge.csv,K1_N_per_m,第 1 层初始侧向刚度,Initial lateral stiffness of story 1,N/m,float,input,
+summary_results_all.csv / summary_results_ei.csv / summary_results_northridge.csv,K2_N_per_m,第 2 层初始侧向刚度,Initial lateral stiffness of story 2,N/m,float,input,
+summary_results_all.csv / summary_results_ei.csv / summary_results_northridge.csv,K3_N_per_m,第 3 层初始侧向刚度,Initial lateral stiffness of story 3,N/m,float,input,
+summary_results_all.csv / summary_results_ei.csv / summary_results_northridge.csv,K4_N_per_m,第 4 层初始侧向刚度,Initial lateral stiffness of story 4,N/m,float,input,
+summary_results_all.csv / summary_results_ei.csv / summary_results_northridge.csv,K5_N_per_m,第 5 层初始侧向刚度,Initial lateral stiffness of story 5,N/m,float,input,
+summary_results_all.csv / summary_results_ei.csv / summary_results_northridge.csv,Qy1_N,第 1 层屈服剪力,Yield shear force of story 1,N,float,input,
+summary_results_all.csv / summary_results_ei.csv / summary_results_northridge.csv,Qy2_N,第 2 层屈服剪力,Yield shear force of story 2,N,float,input,
+summary_results_all.csv / summary_results_ei.csv / summary_results_northridge.csv,Qy3_N,第 3 层屈服剪力,Yield shear force of story 3,N,float,input,
+summary_results_all.csv / summary_results_ei.csv / summary_results_northridge.csv,Qy4_N,第 4 层屈服剪力,Yield shear force of story 4,N,float,input,
+summary_results_all.csv / summary_results_ei.csv / summary_results_northridge.csv,Qy5_N,第 5 层屈服剪力,Yield shear force of story 5,N,float,input,
+summary_results_all.csv / summary_results_ei.csv / summary_results_northridge.csv,rayleigh_alphaM,Rayleigh 质量比例阻尼系数,Mass-proportional Rayleigh damping coefficient,-,float,derived_parameter,
+summary_results_all.csv / summary_results_ei.csv / summary_results_northridge.csv,rayleigh_betaK,Rayleigh 初始刚度比例阻尼系数,Initial-stiffness-proportional Rayleigh damping coefficient,-,float,derived_parameter,
+summary_results_all.csv / summary_results_ei.csv / summary_results_northridge.csv,dt,地震动时间步长,Ground motion time step,s,float,input,
+summary_results_all.csv / summary_results_ei.csv / summary_results_northridge.csv,gm_unit,地震动加速度单位,Unit of ground motion acceleration,-,string,metadata,本数据集中可为 cm/s2、m/s2 或 g；以实际文件为准。
+summary_results_all.csv / summary_results_ei.csv / summary_results_northridge.csv,n_steps,时程分析步数,Number of time-history analysis steps,-,int,metadata,
+summary_results_all.csv / summary_results_ei.csv / summary_results_northridge.csv,top_disp_max_m,最大顶点位移,Maximum absolute roof displacement,m,float,output,
+summary_results_all.csv / summary_results_ei.csv / summary_results_northridge.csv,max_story_drift,最大层间位移角,Maximum absolute interstory drift ratio,-,float,output,
+summary_results_all.csv / summary_results_ei.csv / summary_results_northridge.csv,base_shear_max_N,最大基底剪力,Maximum absolute base shear,N,float,output,
+floor_disp.csv,time,时间,Time,s,float,time_history,
+floor_disp.csv,u1,第 1 层水平位移,Horizontal displacement of floor 1,m,float,time_history,
+floor_disp.csv,u2,第 2 层水平位移,Horizontal displacement of floor 2,m,float,time_history,
+floor_disp.csv,u3,第 3 层水平位移,Horizontal displacement of floor 3,m,float,time_history,
+floor_disp.csv,u4,第 4 层水平位移,Horizontal displacement of floor 4,m,float,time_history,
+floor_disp.csv,u5,第 5 层水平位移,Horizontal displacement of floor 5,m,float,time_history,
+story_drift.csv,time,时间,Time,s,float,time_history,
+story_drift.csv,drift1,第 1 层层间位移角,Interstory drift ratio of story 1,-,float,time_history,
+story_drift.csv,drift2,第 2 层层间位移角,Interstory drift ratio of story 2,-,float,time_history,
+story_drift.csv,drift3,第 3 层层间位移角,Interstory drift ratio of story 3,-,float,time_history,
+story_drift.csv,drift4,第 4 层层间位移角,Interstory drift ratio of story 4,-,float,time_history,
+story_drift.csv,drift5,第 5 层层间位移角,Interstory drift ratio of story 5,-,float,time_history,
+base_shear.csv,time,时间,Time,s,float,time_history,
+base_shear.csv,base_shear,基底剪力时程,Base shear time history,N,float,time_history,
+ei3.txt / northbridge.txt,acceleration,地震动加速度单列数据,Single-column ground motion acceleration record,cm/s2,float,ground_motion,若实际单位不同，应在 ground_motion_info.csv 和 README.md 中同步说明。
+optional derived features in processed ML dataset,K_mean_N_per_m,各层初始刚度平均值,Mean initial lateral stiffness of all stories,N/m,float,derived_feature,如果 summary_results_all.csv 中没有该列，可忽略本行。
+optional derived features in processed ML dataset,K_min_N_per_m,各层初始刚度最小值,Minimum initial lateral stiffness among stories,N/m,float,derived_feature,如果 summary_results_all.csv 中没有该列，可忽略本行。
+optional derived features in processed ML dataset,K_max_N_per_m,各层初始刚度最大值,Maximum initial lateral stiffness among stories,N/m,float,derived_feature,如果 summary_results_all.csv 中没有该列，可忽略本行。
+optional derived features in processed ML dataset,K_std_N_per_m,各层初始刚度标准差,Standard deviation of initial lateral stiffness among stories,N/m,float,derived_feature,如果 summary_results_all.csv 中没有该列，可忽略本行。
+optional derived features in processed ML dataset,Qy_mean_N,各层屈服剪力平均值,Mean yield shear force of all stories,N,float,derived_feature,如果 summary_results_all.csv 中没有该列，可忽略本行。
+optional derived features in processed ML dataset,Qy_min_N,各层屈服剪力最小值,Minimum yield shear force among stories,N,float,derived_feature,如果 summary_results_all.csv 中没有该列，可忽略本行。
+optional derived features in processed ML dataset,Qy_max_N,各层屈服剪力最大值,Maximum yield shear force among stories,N,float,derived_feature,如果 summary_results_all.csv 中没有该列，可忽略本行。
+optional derived features in processed ML dataset,Qy_std_N,各层屈服剪力标准差,Standard deviation of yield shear force among stories,N,float,derived_feature,如果 summary_results_all.csv 中没有该列，可忽略本行。
+optional derived features in processed ML dataset,uy1_m,第 1 层屈服位移，通常由 Qy1_N / K1_N_per_m 得到,"Yield displacement of story 1, commonly calculated as Qy1_N / K1_N_per_m",m,float,derived_feature,如果 summary_results_all.csv 中没有该列，可忽略本行。
+optional derived features in processed ML dataset,uy2_m,第 2 层屈服位移，通常由 Qy2_N / K2_N_per_m 得到,"Yield displacement of story 2, commonly calculated as Qy2_N / K2_N_per_m",m,float,derived_feature,如果 summary_results_all.csv 中没有该列，可忽略本行。
+optional derived features in processed ML dataset,uy3_m,第 3 层屈服位移，通常由 Qy3_N / K3_N_per_m 得到,"Yield displacement of story 3, commonly calculated as Qy3_N / K3_N_per_m",m,float,derived_feature,如果 summary_results_all.csv 中没有该列，可忽略本行。
+optional derived features in processed ML dataset,uy4_m,第 4 层屈服位移，通常由 Qy4_N / K4_N_per_m 得到,"Yield displacement of story 4, commonly calculated as Qy4_N / K4_N_per_m",m,float,derived_feature,如果 summary_results_all.csv 中没有该列，可忽略本行。
+optional derived features in processed ML dataset,uy5_m,第 5 层屈服位移，通常由 Qy5_N / K5_N_per_m 得到,"Yield displacement of story 5, commonly calculated as Qy5_N / K5_N_per_m",m,float,derived_feature,如果 summary_results_all.csv 中没有该列，可忽略本行。
+optional derived features in processed ML dataset,yield_drift1,第 1 层屈服层间位移角，通常由 uy1_m / story_height_m 得到,"Yield drift ratio of story 1, commonly calculated as uy1_m / story_height_m",-,float,derived_feature,如果 summary_results_all.csv 中没有该列，可忽略本行。
+optional derived features in processed ML dataset,yield_drift2,第 2 层屈服层间位移角，通常由 uy2_m / story_height_m 得到,"Yield drift ratio of story 2, commonly calculated as uy2_m / story_height_m",-,float,derived_feature,如果 summary_results_all.csv 中没有该列，可忽略本行。
+optional derived features in processed ML dataset,yield_drift3,第 3 层屈服层间位移角，通常由 uy3_m / story_height_m 得到,"Yield drift ratio of story 3, commonly calculated as uy3_m / story_height_m",-,float,derived_feature,如果 summary_results_all.csv 中没有该列，可忽略本行。
+optional derived features in processed ML dataset,yield_drift4,第 4 层屈服层间位移角，通常由 uy4_m / story_height_m 得到,"Yield drift ratio of story 4, commonly calculated as uy4_m / story_height_m",-,float,derived_feature,如果 summary_results_all.csv 中没有该列，可忽略本行。
+optional derived features in processed ML dataset,yield_drift5,第 5 层屈服层间位移角，通常由 uy5_m / story_height_m 得到,"Yield drift ratio of story 5, commonly calculated as uy5_m / story_height_m",-,float,derived_feature,如果 summary_results_all.csv 中没有该列，可忽略本行。
