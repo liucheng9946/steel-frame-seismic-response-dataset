@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it using the metadata below."
+type: dataset
+title: "Steel Frame Seismic Response Dataset"
+version: "1.0.0"
+date-released: "2026-05-21"
+abstract: "An OpenSees-generated numerical dataset for machine-learning-based seismic response prediction of five-story steel frame structures. The dataset contains 2,000 valid nonlinear time-history analysis samples under EI and Northridge ground motions. Input variables include story stiffness, story yield shear force, floor mass, story height, damping ratio, and post-yield stiffness ratio. Output variables include maximum roof displacement, maximum interstory drift ratio, and maximum base shear."
+authors:
+  - family-names: "Sun"
+    given-names: "Jingke"
+keywords:
+  - "steel frame"
+  - "seismic response"
+  - "OpenSees"
+  - "nonlinear time-history analysis"
+  - "surrogate model"
+  - "machine learning"
+  - "structural engineering"
+license: "CC-BY-4.0"
+repository-code: "https://github.com/YOUR_USERNAME/steel-frame-seismic-response-dataset"
+url: "https://github.com/YOUR_USERNAME/steel-frame-seismic-response-dataset"
+preferred-citation:
+  type: dataset
+  title: "Steel Frame Seismic Response Dataset"
+  authors:
+    - family-names: "Sun"
+      given-names: "Jingke"
+  version: "1.0.0"
+  date-released: "2026-05-21"
+  url: "https://github.com/YOUR_USERNAME/steel-frame-seismic-response-dataset"
